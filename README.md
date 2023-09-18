@@ -80,6 +80,6 @@ If you'd like to contribute to any of the projects or have suggestions for impro
 
 For any inquiries or collaboration opportunities, feel free to reach out to me:
 
-- **Email:** [your-email@example.com](mailto:erickborda96@gmail.com)
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/erick-borda-06737ba4/)
-- **GitHub:** [Your GitHub Profile](https://github.com/erickbordam/DotNet)
+- **Email:** [erickborda96@gmail.com](mailto:erickborda96@gmail.com)
+- **LinkedIn:** [Erick Borda](https://www.linkedin.com/in/erick-borda-06737ba4/)
+- **GitHub:** [erickbordam](https://github.com/erickbordam/DotNet)
