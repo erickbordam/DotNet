@@ -12,7 +12,16 @@ Welcome to my .NET portfolio! This repository showcases my skills and expertise 
 
 ## Projects
 
-### Project 1: Project Name
+### Project 1: Programming Fundamentals
+
+- **Description:** This project focuses on fundamental programming concepts, such as variables, control structures, functions, etc.
+- **Technologies Used:**
+  - C#
+- **How to Run:**
+  1. Step-by-step instructions on setting up the project locally.
+  2. Any prerequisites or dependencies needed.
+
+### Project 2: Project Name
 
 - **Description:** Brief overview of the project's purpose and functionality.
 - **Technologies Used:**
@@ -24,7 +33,7 @@ Welcome to my .NET portfolio! This repository showcases my skills and expertise 
   1. Step-by-step instructions on setting up the project locally.
   2. Any prerequisites or dependencies needed.
 
-### Project 2: Project Name
+### Project 3: Project Name
 
 - **Description:** Brief overview of the project's purpose and functionality.
 - **Technologies Used:**
@@ -32,17 +41,6 @@ Welcome to my .NET portfolio! This repository showcases my skills and expertise 
   - ASP.NET Core
   - RESTful APIs
   - Entity Framework Core
-- **How to Run:**
-  1. Step-by-step instructions on setting up the project locally.
-  2. Any prerequisites or dependencies needed.
-
-### Project 3: Project Name
-
-- **Description:** Brief overview of the project's purpose and functionality.
-- **Technologies Used:**
-  - C#
-  - WinForms
-  - ADO.NET
 - **How to Run:**
   1. Step-by-step instructions on setting up the project locally.
   2. Any prerequisites or dependencies needed.
