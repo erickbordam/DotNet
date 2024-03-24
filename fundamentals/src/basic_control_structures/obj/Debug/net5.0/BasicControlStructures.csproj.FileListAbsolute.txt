@@ -1,0 +1,12 @@
+E:\2024\DotNet\fundamentals\src\basic_control_structures\bin\Debug\net5.0\BasicControlStructures.deps.json
+E:\2024\DotNet\fundamentals\src\basic_control_structures\bin\Debug\net5.0\BasicControlStructures.dll
+E:\2024\DotNet\fundamentals\src\basic_control_structures\bin\Debug\net5.0\ref\BasicControlStructures.dll
+E:\2024\DotNet\fundamentals\src\basic_control_structures\bin\Debug\net5.0\BasicControlStructures.pdb
+E:\2024\DotNet\fundamentals\src\basic_control_structures\obj\Debug\net5.0\BasicControlStructures.csprojAssemblyReference.cache
+E:\2024\DotNet\fundamentals\src\basic_control_structures\obj\Debug\net5.0\BasicControlStructures.GeneratedMSBuildEditorConfig.editorconfig
+E:\2024\DotNet\fundamentals\src\basic_control_structures\obj\Debug\net5.0\BasicControlStructures.AssemblyInfoInputs.cache
+E:\2024\DotNet\fundamentals\src\basic_control_structures\obj\Debug\net5.0\BasicControlStructures.AssemblyInfo.cs
+E:\2024\DotNet\fundamentals\src\basic_control_structures\obj\Debug\net5.0\BasicControlStructures.csproj.CoreCompileInputs.cache
+E:\2024\DotNet\fundamentals\src\basic_control_structures\obj\Debug\net5.0\BasicControlStructures.dll
+E:\2024\DotNet\fundamentals\src\basic_control_structures\obj\Debug\net5.0\ref\BasicControlStructures.dll
+E:\2024\DotNet\fundamentals\src\basic_control_structures\obj\Debug\net5.0\BasicControlStructures.pdb

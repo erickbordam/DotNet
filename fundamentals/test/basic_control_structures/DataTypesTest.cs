@@ -1,12 +1,12 @@
-using fundamentals.basic_control_structures;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using BasicControlStructures;
+using NUnit.Framework;
 
-namespace fundamentalsTest
+namespace BasicControlStructuresTests
 {
-    [TestClass]
+    [TestFixture]
     public class DataTypesTest
     {
-        [TestMethod]
+        [Test]
         public void DataTypesSampleTest()
         {
             try

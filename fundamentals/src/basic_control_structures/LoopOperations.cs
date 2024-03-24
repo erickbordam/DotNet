@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace fundamentals.basic_control_structures
+namespace BasicControlStructures
 {
     public class LoopOperations
     {
