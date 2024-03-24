@@ -11,6 +11,27 @@ Welcome to my .NET portfolio! This repository showcases my skills and expertise 
 5. [Contact](#contact)
 
 ## Projects
+### Project 0: C# Fundamentals
+
+- **Description:** This project covers the fundamental concepts of programming using C#, providing a structured approach to learning basic syntax, control structures, data types, and more. It serves as the foundation for understanding more complex .NET technologies.
+- **Technologies Used:**
+  - C#
+- **How to Run:**
+  1. Ensure you have the .NET SDK installed on your system. You can download it from the [official .NET website](https://dotnet.microsoft.com/download).
+  2. Clone the repository to your local machine using the command:
+     ```
+     git clone https://github.com/erickbordam/DotNet.git
+     ```
+  3. Navigate to the directory of "Project 0" (e.g., `cd DotNet/fundamentals`).
+  4. To build the project, run:
+     ```
+     dotnet build
+     ```
+  5. To run the project, navigate to the specific project folder (if not already there) and execute:
+     ```
+     dotnet run
+     ```
+  6. Follow any additional instructions provided within the project to explore the fundamental concepts of programming with C#.
 
 ### Project 1: Programming Fundamentals
 
