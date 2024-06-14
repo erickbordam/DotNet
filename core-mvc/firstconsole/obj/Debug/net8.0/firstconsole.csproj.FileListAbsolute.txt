@@ -1,0 +1,15 @@
+E:\2024\DotNet\core-mvc\firstconsole\bin\Debug\net8.0\firstconsole.exe
+E:\2024\DotNet\core-mvc\firstconsole\bin\Debug\net8.0\firstconsole.deps.json
+E:\2024\DotNet\core-mvc\firstconsole\bin\Debug\net8.0\firstconsole.runtimeconfig.json
+E:\2024\DotNet\core-mvc\firstconsole\bin\Debug\net8.0\firstconsole.dll
+E:\2024\DotNet\core-mvc\firstconsole\bin\Debug\net8.0\firstconsole.pdb
+E:\2024\DotNet\core-mvc\firstconsole\obj\Debug\net8.0\firstconsole.GeneratedMSBuildEditorConfig.editorconfig
+E:\2024\DotNet\core-mvc\firstconsole\obj\Debug\net8.0\firstconsole.AssemblyInfoInputs.cache
+E:\2024\DotNet\core-mvc\firstconsole\obj\Debug\net8.0\firstconsole.AssemblyInfo.cs
+E:\2024\DotNet\core-mvc\firstconsole\obj\Debug\net8.0\firstconsole.csproj.CoreCompileInputs.cache
+E:\2024\DotNet\core-mvc\firstconsole\obj\Debug\net8.0\firstconsole.sourcelink.json
+E:\2024\DotNet\core-mvc\firstconsole\obj\Debug\net8.0\firstconsole.dll
+E:\2024\DotNet\core-mvc\firstconsole\obj\Debug\net8.0\refint\firstconsole.dll
+E:\2024\DotNet\core-mvc\firstconsole\obj\Debug\net8.0\firstconsole.pdb
+E:\2024\DotNet\core-mvc\firstconsole\obj\Debug\net8.0\firstconsole.genruntimeconfig.cache
+E:\2024\DotNet\core-mvc\firstconsole\obj\Debug\net8.0\ref\firstconsole.dll
