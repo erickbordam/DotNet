@@ -1,9 +1,11 @@
 using KYC360.Commons.Mapper;
 using KYC360.Core.Data;
 using KYC360.Core.Mappings;
+using KYC360.Core.Models;
 using KYC360.Core.Services;
+using KYC360.Core.Configurations;
 using Microsoft.OpenApi.Models;
-
+using Microsoft.Extensions.Options; 
 namespace KYC360.Core
 {
     public class Startup
@@ -19,64 +21,40 @@ namespace KYC360.Core
         {
             services.AddControllers();
             services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "KYC360 API", Version = "v1" });
-            });
+            services.AddSwaggerGen();
             services.AddLogging();
 
-            // Register AutoMapper with profiles
-            services.AddAutoMapper(typeof(EntityMappingProfile));
-
-            services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAllOrigins",
-                    builder =>
-                    {
-                        builder.AllowAnyOrigin()
-                               .AllowAnyMethod()
-                               .AllowAnyHeader();
-                    });
-            });
+            // Register configuration settings
+            services.Configure<RetryPolicySettings>(Configuration.GetSection("RetryPolicy"));
 
             services.AddSingleton(typeof(GenericMockDatabase<,>), provider =>
             {
                 var logger = provider.GetRequiredService<ILogger<GenericMockDatabase<Entity, string>>>();
-                return new GenericMockDatabase<Entity, string>(logger, maxRetryAttempts: 3, initialDelay: 1000, maxDelay: 8000, backoffFactor: 2.0);
+                var settings = provider.GetRequiredService<IOptions<RetryPolicySettings>>().Value;
+                return new GenericMockDatabase<Entity, string>(logger, settings.MaxRetryAttempts, settings.InitialDelay, settings.MaxDelay, settings.BackoffFactor);
             });
+
             services.AddScoped<EntityService>();
             services.AddScoped(typeof(GenericMapper<,>));
-            services.AddSingleton<DataSeeder>();  // Register the DataSeeder
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DataSeeder dataSeeder, ILogger<Startup> logger)  // Inject DataSeeder
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c =>
-                {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "KYC360 API v1");
-                });
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "KYC360 API v1"));
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
-            app.UseCors("AllowAllOrigins");
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-
-            logger.LogInformation("Starting data seeding...");
-            dataSeeder.Seed();  // Seed the data
-            logger.LogInformation("Data seeding completed.");
         }
     }
 }

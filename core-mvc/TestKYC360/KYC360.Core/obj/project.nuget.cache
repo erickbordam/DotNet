@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LiTyI3dvE2A=",
+  "dgSpecHash": "d7SgMsl9Ofg=",
   "success": true,
-  "projectFilePath": "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\KYC360.Core.csproj",
+  "projectFilePath": "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\KYC360.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\erick\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\erick\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

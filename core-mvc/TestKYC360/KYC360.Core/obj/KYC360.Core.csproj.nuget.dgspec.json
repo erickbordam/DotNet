@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\KYC360.Core.csproj": {}
+    "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\KYC360.Core.csproj": {}
   },
   "projects": {
-    "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\KYC360.Commons.csproj": {
+    "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\KYC360.Commons.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\KYC360.Commons.csproj",
+        "projectUniqueName": "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\KYC360.Commons.csproj",
         "projectName": "KYC360.Commons",
-        "projectPath": "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\KYC360.Commons.csproj",
+        "projectPath": "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\KYC360.Commons.csproj",
         "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-        "outputPath": "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\obj\\",
+        "outputPath": "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -74,36 +72,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\KYC360.Core.csproj": {
+    "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\KYC360.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\KYC360.Core.csproj",
+        "projectUniqueName": "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\KYC360.Core.csproj",
         "projectName": "KYC360.Core",
-        "projectPath": "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\KYC360.Core.csproj",
+        "projectPath": "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\KYC360.Core.csproj",
         "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-        "outputPath": "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\obj\\",
+        "outputPath": "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\KYC360.Commons.csproj": {
-                "projectPath": "E:\\2024\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\KYC360.Commons.csproj"
+              "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\KYC360.Commons.csproj": {
+                "projectPath": "D:\\projects\\DotNet\\core-mvc\\TestKYC360\\KYC360.Commons\\KYC360.Commons.csproj"
               }
             }
           }
@@ -151,7 +147,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

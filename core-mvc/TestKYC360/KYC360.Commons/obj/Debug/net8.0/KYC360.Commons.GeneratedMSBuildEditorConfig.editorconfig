@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KYC360.Commons
-build_property.ProjectDir = E:\2024\DotNet\core-mvc\TestKYC360\KYC360.Commons\
+build_property.ProjectDir = D:\projects\DotNet\core-mvc\TestKYC360\KYC360.Commons\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
