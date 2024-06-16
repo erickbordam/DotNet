@@ -39,7 +39,11 @@ namespace KYC360.Core
                     });
             });
 
-            services.AddSingleton(typeof(GenericMockDatabase<,>));
+            services.AddSingleton(typeof(GenericMockDatabase<,>), provider =>
+            {
+                var logger = provider.GetRequiredService<ILogger<GenericMockDatabase<Entity, string>>>();
+                return new GenericMockDatabase<Entity, string>(logger, maxRetryAttempts: 3, initialDelay: 1000, maxDelay: 8000, backoffFactor: 2.0);
+            });
             services.AddScoped<EntityService>();
             services.AddScoped(typeof(GenericMapper<,>));
             services.AddSingleton<DataSeeder>();  // Register the DataSeeder
