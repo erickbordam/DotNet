@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KYC360.Commons", "KYC360.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KYC360.Core", "KYC360.Core\KYC360.Core.csproj", "{B039F25F-01B7-46FC-B9F0-9B4DCFCDE8E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KYC360.Tests", "KYC360.Tests\KYC360.Tests.csproj", "{0BC3FF57-F06E-40CE-8C7C-7026A7F93158}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{B039F25F-01B7-46FC-B9F0-9B4DCFCDE8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B039F25F-01B7-46FC-B9F0-9B4DCFCDE8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B039F25F-01B7-46FC-B9F0-9B4DCFCDE8E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BC3FF57-F06E-40CE-8C7C-7026A7F93158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BC3FF57-F06E-40CE-8C7C-7026A7F93158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BC3FF57-F06E-40CE-8C7C-7026A7F93158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BC3FF57-F06E-40CE-8C7C-7026A7F93158}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

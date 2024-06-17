@@ -1,24 +1,30 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Threading;
 using KYC360.Commons.Models;
+using Microsoft.Extensions.Logging;
 
 namespace KYC360.Core.Data
 {
     public class GenericMockDatabase<T, TId> where T : IIdentifiable<TId>
     {
-        private readonly ConcurrentDictionary<TId, T> items = new ConcurrentDictionary<TId, T>();
+        private readonly ConcurrentDictionary<TId, T> _items;
         private readonly ILogger<GenericMockDatabase<T, TId>> _logger;
         private readonly int _maxRetryAttempts;
         private readonly int _initialDelay;
         private readonly int _maxDelay;
         private readonly double _backoffFactor;
 
-        public GenericMockDatabase(ILogger<GenericMockDatabase<T, TId>> logger, int maxRetryAttempts = 3, 
-                                   int initialDelay = 1000, int maxDelay = 8000, double backoffFactor = 2.0)
+        public GenericMockDatabase(
+            ILogger<GenericMockDatabase<T, TId>> logger, 
+            int maxRetryAttempts, 
+            int initialDelay, 
+            int maxDelay, 
+            double backoffFactor,
+            ConcurrentDictionary<TId, T> items = null)  // allow injecting dictionary for testing
         {
+            _items = items ?? new ConcurrentDictionary<TId, T>();
             _logger = logger;
             _maxRetryAttempts = maxRetryAttempts;
             _initialDelay = initialDelay;
@@ -28,32 +34,32 @@ namespace KYC360.Core.Data
 
         public bool AddItem(T item)
         {
-            return RetryPolicy(() => items.TryAdd(item.Id, item), nameof(AddItem));
+            return RetryPolicy(() => _items.TryAdd(item.Id, item), nameof(AddItem));
         }
 
         public T GetItemById(TId id)
         {
-            items.TryGetValue(id, out var item);
+            _items.TryGetValue(id, out var item);
             return item;
         }
 
         public bool UpdateItem(TId id, T updatedItem)
         {
-            if (items.TryGetValue(id, out var currentItem))
+            if (_items.TryGetValue(id, out var currentItem))
             {
-                return RetryPolicy(() => items.TryUpdate(id, updatedItem, currentItem), nameof(UpdateItem));
+                return RetryPolicy(() => _items.TryUpdate(id, updatedItem, currentItem), nameof(UpdateItem));
             }
             return false;
         }
 
         public bool DeleteItem(TId id)
         {
-            return RetryPolicy(() => items.TryRemove(id, out _), nameof(DeleteItem));
+            return RetryPolicy(() => _items.TryRemove(id, out _), nameof(DeleteItem));
         }
 
         public IEnumerable<T> GetAllItems()
         {
-            return items.Values;
+            return _items.Values;
         }
 
         private bool RetryPolicy(Func<bool> operation, string operationName)
