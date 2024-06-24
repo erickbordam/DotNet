@@ -61,8 +61,8 @@ TESTKYC360/
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/erickbordam/DotNet/tree/51fcba6b857b743d94b568f7514bb5176ff29e5c/core-mvc/TestKYC360
-    cd core-mvc/TestKYC360
+    git clone https://github.com/erickbordam/DotNet/
+    cd ./DotNet/core-mvc/TestKYC360
     ```
 
 2. Restore the dependencies:

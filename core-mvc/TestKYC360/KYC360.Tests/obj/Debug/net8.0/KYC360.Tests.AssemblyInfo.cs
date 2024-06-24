@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KYC360.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01db72882f03de10b866b17cd0b1d6425bb382f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0617ea11022b0b919813492da64c67dfab5229b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("KYC360.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KYC360.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
