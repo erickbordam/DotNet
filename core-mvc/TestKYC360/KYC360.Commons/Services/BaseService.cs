@@ -49,7 +49,7 @@ namespace KYC360.Commons.Services
 
         // Abstract CRUD methods to be implemented by derived services
         public abstract IEnumerable<TDto> GetAll();
-        public abstract TDto GetById(TId id);
+        public abstract TDto? GetById(TId id);
         public abstract void Add(TDto item);
         public abstract void Update(TId id, TDto item);
         public abstract void Delete(TId id);

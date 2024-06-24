@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using KYC360.Commons.DTOs;
 using KYC360.Commons.Mapper;
 using KYC360.Commons.Models;
 using KYC360.Commons.Services;
 using KYC360.Core.Data;
 using KYC360.Core.Models;
+using Microsoft.Extensions.Logging;
 
 namespace KYC360.Core.Services
 {
@@ -67,7 +67,7 @@ namespace KYC360.Core.Services
             return entitiesDTO;
         }
 
-        public override EntityDTO GetById(string id)
+        public override EntityDTO? GetById(string id)
         {
             LogInformation($"Retrieving entity with ID: {id}");
             var entity = _database.GetItemById(id);
@@ -112,27 +112,27 @@ namespace KYC360.Core.Services
 
             var entityDTOs = GetAll()
                 .Where(e =>
-                    e.Addresses.Any(a => 
+                    (e.Addresses != null && e.Addresses.Any(a => 
                         (a.CountryName?.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ?? false) ||
-                        (a.AddressLineDesc?.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ?? false)) ||
-                    e.Names.Any(n => 
+                        (a.AddressLineDesc?.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ?? false))) ||
+                    (e.Names != null && e.Names.Any(n => 
                         (n.FirstName?.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ?? false) ||
                         (n.MiddleName?.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ?? false) ||
-                        (n.Surname?.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ?? false)))
+                        (n.Surname?.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ?? false))))
                 .ToList();
             return entityDTOs;
         }
 
-        public IEnumerable<EntityDTO> Filter(string gender, DateTime? startDate, DateTime? endDate, List<string> countries)
+        public IEnumerable<EntityDTO> Filter(string? gender, DateTime? startDate, DateTime? endDate, List<string> countries)
         {
             LogInformation("Filtering entities.");
 
             var entityDTOs = GetAll()
                 .Where(e =>
                     (string.IsNullOrEmpty(gender) || e.Gender.Equals(gender, StringComparison.OrdinalIgnoreCase)) &&
-                    (!startDate.HasValue || e.Dates.Any(d => d.DateVal >= startDate)) &&
-                    (!endDate.HasValue || e.Dates.Any(d => d.DateVal <= endDate)) &&
-                    (!countries.Any() || e.Addresses.Any(a => countries.Contains(a.CountryName)))
+                    (!startDate.HasValue || (e.Dates != null && e.Dates.Any(d => d.DateVal >= startDate))) &&
+                    (!endDate.HasValue || (e.Dates != null && e.Dates.Any(d => d.DateVal <= endDate))) &&
+                    (!countries.Any() || (e.Addresses != null && e.Addresses.Any(a => countries.Contains(a.CountryName))))
                 )
                 .ToList();
             return entityDTOs;
@@ -148,19 +148,19 @@ namespace KYC360.Core.Services
             }
         }
 
-        private string GetAddressLineDescription(int? addressLineId)
+        private string? GetAddressLineDescription(int? addressLineId)
         {
             // Lookup the address line description
             return addressLineId.HasValue && _addressLineDescriptions.TryGetValue(addressLineId.Value, out var description) ? description : null;
         }
 
-        private string GetCityName(int? cityId)
+        private string? GetCityName(int? cityId)
         {
             // Lookup the city name
             return cityId.HasValue && _cityNames.TryGetValue(cityId.Value, out var name) ? name : null;
         }
 
-        private string GetCountryName(int? countryId)
+        private string? GetCountryName(int? countryId)
         {
             // Lookup the country name
             return countryId.HasValue && _countryNames.TryGetValue(countryId.Value, out var name) ? name : null;
@@ -185,7 +185,5 @@ namespace KYC360.Core.Services
 
             return entities;
         }
-
-
     }
 }

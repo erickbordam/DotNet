@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace KYC360.Core.Data
 {
-    public class GenericMockDatabase<T, TId> where T : IIdentifiable<TId>
+    public class GenericMockDatabase<T, TId> where T : IIdentifiable<TId> where TId : notnull
     {
         private readonly ConcurrentDictionary<TId, T> _items;
         private readonly ILogger<GenericMockDatabase<T, TId>> _logger;
@@ -22,7 +22,7 @@ namespace KYC360.Core.Data
             int initialDelay, 
             int maxDelay, 
             double backoffFactor,
-            ConcurrentDictionary<TId, T> items = null)  // allow injecting dictionary for testing
+            ConcurrentDictionary<TId, T>? items = null)  // allow injecting dictionary for testing
         {
             _items = items ?? new ConcurrentDictionary<TId, T>();
             _logger = logger;
@@ -37,7 +37,7 @@ namespace KYC360.Core.Data
             return RetryPolicy(() => _items.TryAdd(item.Id, item), nameof(AddItem));
         }
 
-        public T GetItemById(TId id)
+        public T? GetItemById(TId id)
         {
             _items.TryGetValue(id, out var item);
             return item;

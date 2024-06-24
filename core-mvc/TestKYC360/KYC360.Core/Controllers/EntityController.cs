@@ -36,11 +36,10 @@ namespace KYC360.Core.Controllers
             return Ok(entity);
         }
 
-
         [HttpGet("search")]
         public ActionResult<IEnumerable<EntityDTO>> GetSearch([FromQuery] string? search, [FromQuery] string? gender, 
                                                               [FromQuery] DateTime? startDate, [FromQuery] DateTime? endDate, 
-                                                              [FromQuery] List<string> countries, 
+                                                              [FromQuery] List<string>? countries, 
                                                               [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10, 
                                                               [FromQuery] string sortBy = "id", [FromQuery] bool sortDesc = false)
         {
@@ -58,7 +57,6 @@ namespace KYC360.Core.Controllers
             var pagedAndSortedResults = _entityService.PaginateAndSort(results, pageNumber, pageSize, sortBy, sortDesc);
             return Ok(pagedAndSortedResults);
         }
-
 
         [HttpPost]
         public ActionResult Create([FromBody] EntityDTO entityDto)
